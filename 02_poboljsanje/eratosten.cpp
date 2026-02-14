@@ -1,5 +1,5 @@
 /**
- * Napisati program koji odredjuje broj prostih brojeva u intervalu [a, b] 
+ * Napisati program koji odredjuje broj prostih brojeva u intervalu [a, b]
  * i njihov zbir (ako zbir ima vise od 6 cifara, ispisati ostatak pri deljenju sa 1000000).
  */
 
@@ -41,12 +41,14 @@ void prosti_u_intevalu(int a, int b, int &broj, int &zbir)
     zbir = 0;
     broj = 0;
     for (int i = a; i <= b; i++)
+    {
         if (prost[i])
         {
             cout << "prost broj: " << i << '\n';
             zbir = (zbir + i) % 1000000;
             broj++;
         }
+    }
 }
 
 int main()
